@@ -1,2 +1,0 @@
-config SHIELD_COSMOS_RIGHT
-    def_bool $(shields_list_contains,cosmos_right)
