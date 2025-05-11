@@ -2,8 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: zmk-keyboard-cosmos
-      url-base: https://github.com/jordanmsllvn/zmk-cosmos-module.git
+    - name: jordanmsllvn
+      url-base: https://github.com/jordanmsllvn
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -11,5 +11,8 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: zmk-cosmos-module
+      remote: jordanmsllvn
+      revision: main
   self:
     path: config
