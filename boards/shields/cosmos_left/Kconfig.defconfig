@@ -1,0 +1,15 @@
+if SHIELD_MY_DACTYL_LEFT
+    # Assign the human-readable name advertised over USB/BLE
+    config ZMK_KEYBOARD_NAME
+        default "Cosmos"
+
+    # Mark this half as the central side of the split
+    config ZMK_SPLIT_ROLE_CENTRAL
+        default y
+endif
+
+if SHIELD_MY_DACTYL_LEFT || SHIELD_MY_DACTYL_RIGHT
+    # Enable split support on both halves
+    config ZMK_SPLIT
+        default y
+endif

@@ -1,0 +1,9 @@
+if SHIELD_MY_DACTYL_RIGHT
+    # Peripheral halves typically don’t set a name; omit ZMK_KEYBOARD_NAME
+endif
+
+if SHIELD_MY_DACTYL_LEFT || SHIELD_MY_DACTYL_RIGHT
+    # Enable split support on both halves
+    config ZMK_SPLIT
+        default y
+endif
